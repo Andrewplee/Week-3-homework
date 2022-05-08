@@ -47,11 +47,11 @@ var generatePassword = function() {
   
   while(lengthConfirm <= 7 || lengthConfirm >= 129) {
 
-   window.alert("password length is not eligible.");
+   window.alert("Password length is not eligible.");
    var lengthConfirm = window.prompt("How many characters would you like your password to be?")
   
    if (lengthConfirm === null) {
-     window.alert("You must enter a length.")
+     window.alert("You must enter a length (numbers).")
      return;} 
   }
   
@@ -62,19 +62,29 @@ var generatePassword = function() {
 
   if (lowerConfirm) {
     passwordArray += abcLower()
+  } else {
+    passwordArray -= abcLower()
   }
 
   if (upperConfirm) {
     passwordArray += abcUpper()
+  } else {
+    passwordArray -= abcUpper()
   }
 
   if (numericConfirm) {
     passwordArray += numeric()
+  } else {
+    passwordArray -= numeric()
   }
 
   if (symbolConfirm) {
     passwordArray += symbols()
+  } else {
+    passwordArray -= symbols()
   }
+
+  console.log(passwordArray);
 
   for (var i = 0; i < lengthConfirm; i++) {   
     password += passwordArray.charAt(Math.floor(Math.random() * passwordArray.length))
