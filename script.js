@@ -91,3 +91,13 @@ var generatePassword = function() {
   }
    return password;
 }
+
+// option 1 = google ".filter" loop
+
+// Math.round means nearest whole number
+
+// charAt allows refenece of a letter at a certain position
+
+// += means concat , -= means subtracts the value from the original variable
+
+// window.confirm = boulean , window.prmopt = returns a string
