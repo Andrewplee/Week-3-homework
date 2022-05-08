@@ -35,3 +35,20 @@ var symbols = function () {
 }
 
 console.log(abcLower(), abcUpper(), numeric(), symbols())
+
+
+// password length requirement
+var lengthConfirm = ""
+
+var generatePassword = function() {
+  var lengthConfirm = window.prompt("How many characters would you like your password to be?");
+  
+  while(lengthConfirm <= 7 || lengthConfirm >= 129) {
+
+   window.alert("password length is not eligible.");
+   var lengthConfirm = window.prompt("How many characters would you like your password to be?")
+  
+   if (lengthConfirm === null) {
+     window.alert("You must enter a length.")
+     return;} 
+  }
