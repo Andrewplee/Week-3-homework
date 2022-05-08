@@ -52,3 +52,10 @@ var generatePassword = function() {
      window.alert("You must enter a length.")
      return;} 
   }
+  
+  var lowerConfirm = confirm("Would you like to include lower cases?")
+  var upperConfirm = confirm("Would you like to include upper cases?")
+  var numericConfirm = confirm("Would you like to include numerics?")
+  var symbolConfirm = confirm("Would you like to include symbols?")
+
+}
