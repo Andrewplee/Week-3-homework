@@ -38,6 +38,8 @@ console.log(abcLower(), abcUpper(), numeric(), symbols())
 
 
 // password length requirement
+var passwordArray = ""
+var password = ""
 var lengthConfirm = ""
 
 var generatePassword = function() {
@@ -58,4 +60,24 @@ var generatePassword = function() {
   var numericConfirm = confirm("Would you like to include numerics?")
   var symbolConfirm = confirm("Would you like to include symbols?")
 
+  if (lowerConfirm) {
+    passwordArray += abcLower()
+  }
+
+  if (upperConfirm) {
+    passwordArray += abcUpper()
+  }
+
+  if (numericConfirm) {
+    passwordArray += numeric()
+  }
+
+  if (symbolConfirm) {
+    passwordArray += symbols()
+  }
+
+  for (var i = 0; i < lengthConfirm; i++) {   
+    password += passwordArray.charAt(Math.floor(Math.random() * passwordArray.length))
+  }
+   return password;
 }
