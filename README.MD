@@ -22,8 +22,17 @@ Finally, I closed off the entire function by returning back to the password arra
 
 # Usage
 
+This image shows the startup of the "Generate password" page.
+![The startup of the generate password page](./assets/images/Initial.png)
 
-# Credits
+This image shows how the length requirement is presented.
+![When the length requirement is presented](./assets/images/pass-length.png)
 
+This image shows how the each of the password conditions will be presented.
+![How each of the password conditions will be presented](./assets/images/pass-condition.png)
+
+This image shows the final result of the password generator.
+![The final result of after choosing the length and the conditions](./assets/images/Final.png)
 
 # License
+Copyright (c) [2022] [Trilogy Education Services, LLC, a 2U, Inc. brand.]
