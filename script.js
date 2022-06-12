@@ -50,7 +50,8 @@ var generatePassword = function() {
    window.alert("Password length is not eligible.");
    var lengthConfirm = window.prompt("How many characters would you like your password to be?")
   
-   if (lengthConfirm === null) {
+   // what if the answer includes a string
+   if (lengthConfirm === null || lengthConfirm === String) {
      window.alert("You must enter a length (numbers).")
      return;} 
   }
@@ -60,6 +61,7 @@ var generatePassword = function() {
   var numericConfirm = confirm("Would you like to include numerics?")
   var symbolConfirm = confirm("Would you like to include symbols?")
 
+  // how to remove the NaN
   if (lowerConfirm) {
     passwordArray += abcLower()
   } else {
